@@ -1,0 +1,16 @@
+name: Demo Vars
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo-vars:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Print message
+        run: |
+          echo DEMO FOO: ${{ vars.FOO }}
+          echo DEMO BAR: ${{ vars.BAR }}

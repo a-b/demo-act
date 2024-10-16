@@ -1,0 +1,22 @@
+name: Demo Assets
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo-asset:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Print message
+        run: |
+          echo DEMO
+          date > asset.txt
+
+      - name: Upload asset
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-asset
+          path: asset.txt
