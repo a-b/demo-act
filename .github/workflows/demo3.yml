@@ -1,0 +1,14 @@
+name: Demo Local Worker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo-vars:
+    runs-on: self-hosted
+    steps:
+      
+      - name: Print message
+        run: |
+          echo DEMO FOO: ${{ vars.FOO }}
+          echo DEMO BAR: ${{ vars.BAR }}
