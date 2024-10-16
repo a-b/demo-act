@@ -1,9 +1,7 @@
 name: Demo Assets
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   demo-asset:
